@@ -1,33 +1,112 @@
 @import "../../styles/_variables.scss";
 
-.navbar {
+.navbar-container {
   position: fixed;
   top: 0;
   z-index: 1;
+  padding-left: $outer-padding;
+  padding-right: $outer-padding;
+  width: 100%;
+
+  box-shadow: 0px 0px 20px -6px $dark-grey;
+  -webkit-box-shadow: 0px 0px 20px -6px $dark-grey;
+  -moz-box-shadow: 0px 0px 20px -6px $dark-grey;
+}
+
+.navbar-inner-container {
+  padding-top: 2rem;
+}
+
+.navbar {
   display: flex;
   width: 100%;
-  height: $navbar-height;
-  background: rgba(0, 0, 0, 0.7);
+
+  ul {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: flex-start;
+
+    li {
+      a {
+        text-decoration: none;
+        padding: 1rem;
+        display: block;
+        position: relative;
+        color: inherit;
+
+        mark {
+          padding: 0px;
+          background-color: $primary-blue;
+          color: white;
+          border-radius: 8px;
+          min-width: 26px;
+          display: inline-block;
+          text-align: center;
+          margin-left: 7px;
+          font-size: 14px;
+        }
+
+        &:visited, &:hover, &:active {
+          color: inherit;
+        }
+
+        &:before, &:after {
+          content: "";
+          bottom: 0;
+          width: 0;
+          height: 3px;
+          display: block;
+          position: absolute;
+          background-color: $primary-blue;
+          -webkit-transition: width 0.3s ease-in-out;
+          transition: width 0.3s ease-in-out, background-color 1s ease-in-out;
+        }
+
+        &:before {
+          right: 50%;
+        }
+
+        &:after {
+          left: 50%;
+        }
+
+
+      }
+
+      &:not(.active) {
+        a {
+          color: $dark-grey;
+
+          mark {
+            background-color: $dark-grey;
+          }
+
+          &:hover {
+            color: $light-blue;
+            mark {
+              background-color: $light-blue;
+            }
+
+            &:before, &:after {
+              background-color: $light-blue;
+              width: 50%;
+            }
+          }
+        }
+      }
+
+      &.active {
+        a:before, a:after {
+          width: 50%;
+          height: 5px;
+        }
+      }
+    }
+  }
 }
 
-.navbar ul {
-  display: flex;
-  list-style: none;
-  width: 100%;
-  justify-content: center;
-}
-
-.navbar ul li {
-  margin: 0 1rem;
-  padding: 1rem;
-}
-
-.navbar ul li a {
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #f4f4f4;
-}
-
-.navbar ul li a:hover {
-  color: skyblue;
+.navbar-header {
+  font-size: 1.5em;
+  margin-bottom: 0.5rem;
 }

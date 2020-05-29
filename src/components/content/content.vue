@@ -1,5 +1,5 @@
 <template>
-  <div></div>
+  <div class="container"></div>
 </template>
 
 <script>
@@ -8,6 +8,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-@import './content.scss';
-</style>
+<style lang="scss" scoped src="./content.scss"></style>

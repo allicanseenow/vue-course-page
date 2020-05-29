@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="root-container">
     <Navbar />
     <Contents />
   </div>
@@ -22,7 +22,7 @@ export default {
 </script>
 
 <style scoped>
-.container {
+.root-container {
   width: 100%;
   height: 100%;
   /* CSS Smooth Scroll */

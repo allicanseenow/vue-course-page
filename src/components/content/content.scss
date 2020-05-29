@@ -1,2 +1,7 @@
 @import "../../styles/_variables.scss";
 
+.container {
+  margin-top: $navbar-height;
+  padding-left: $outer-padding;
+  padding-right: $outer-padding;
+}
