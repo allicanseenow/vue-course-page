@@ -1,5 +1,6 @@
 # landing-page
 
+A demo of this app can be viewed at: https://vue-course-page-lge6r8uuz.now.sh/
 ## Project setup
 ```
 yarn install
