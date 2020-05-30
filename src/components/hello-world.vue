@@ -26,7 +26,7 @@ export default {
   width: 100%;
   height: 100%;
   /* CSS Smooth Scroll */
-  overflow-y: scroll;
+  overflow-y: auto;
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
 }

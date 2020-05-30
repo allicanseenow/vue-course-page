@@ -1,0 +1,81 @@
+@import "../../styles/_variables.scss";
+
+.searchbar-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-stats {
+  margin-left: 15px;
+}
+
+.searchbar{
+  height: 2.25rem;
+  background-color: $grey;
+  border-radius: 30px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  min-width: 250px;
+}
+
+.search_input{
+  border: 0;
+  outline: 0;
+  background: none;
+  line-height: 40px;
+  flex: 1;
+  color: black;
+
+  &::placeholder {
+    color: $dark-grey;
+    opacity: 1;
+  }
+}
+
+.search_icon{
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $dark-grey;
+}
+
+.search-functionality {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+
+  .sort-by {
+    display: flex;
+    align-items: center;
+    color: $dark-grey;
+
+    .sort-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 5px;
+    }
+
+    .sort-text {
+      font-size: 14px;
+    }
+  }
+
+  .date-enrolled {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+
+    .button {
+      display: flex;
+      align-items: center;
+
+      .text {
+        margin-right: 15px;
+      }
+    }
+  }
+}

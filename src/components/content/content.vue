@@ -1,10 +1,17 @@
 <template>
-  <div class="container"></div>
+  <div class="container">
+    <SearchBar />
+  </div>
 </template>
 
 <script>
+import SearchBar from './search-bar';
+
 export default {
   name: 'Contents',
+  components: {
+    SearchBar,
+  },
 };
 </script>
 

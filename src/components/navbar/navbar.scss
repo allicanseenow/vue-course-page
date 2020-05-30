@@ -26,8 +26,10 @@
     list-style: none;
     width: 100%;
     justify-content: flex-start;
+    flex-wrap: wrap;
 
     li {
+      min-width: max-content;
       a {
         text-decoration: none;
         padding: 1rem;
