@@ -1,12 +1,12 @@
 <template>
   <div class="card-container">
-    <div class="card-image" />
-    <ProgressBar />
+    <div class="card-image" :style="{ 'background-image': `url(${imgSrc})` }" />
+    <ProgressBar :percent="completionRate" />
     <div class="card-content">
       <h3>{{ title }}</h3>
       <p>{{ text }}</p>
       <div class="button-container">
-        <Button lightColor>View Progress</Button>
+        <Button lightColor v-if="inProgress">View Progress</Button>
         <Button>Resume</Button>
       </div>
     </div>
@@ -19,9 +19,17 @@ export default {
   name: 'Card',
   props: {
     title: String,
-    text: Object,
+    text: String,
+    completionRate: Number,
+    imgSrc: String,
   },
   components: { Button, ProgressBar },
+  computed: {
+    inProgress() {
+      if (!this.completionRate) return false;
+      return this.completionRate > 0;
+    },
+  },
 };
 </script>
 

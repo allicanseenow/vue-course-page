@@ -1,16 +1,25 @@
 @import "../../../styles/variables";
 
 .card-container {
+  display: flex;
+  flex-direction: column;
   max-width: 275px;
   overflow: hidden;
-  box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);
+  box-shadow: 00px 1px 9px -4px$dark-grey;
+  -webkit-box-shadow: 0px 1px 9px -4px $dark-grey;
+  -moz-box-shadow: 0px 1px 9px -4px $dark-grey;
+
   border-radius: 4px;
   color: rgba(0, 0, 0, 0.87);
-  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   background-color: #fff;
+  transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    box-shadow: 0px 2px 16px 0 $dark-grey;
+    transform: translateY(-10px);
+  }
 
   .card-image {
-    background-image: url("https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1091&q=80");
     display: block;
     background-size: cover;
     background-repeat: no-repeat;
@@ -20,8 +29,10 @@
   }
 
   .card-content {
+    display: flex;
+    flex-direction: column;
     padding: 16px;
-
+    flex: 1;
 
     h3 {
       font-size: 14px;
@@ -35,6 +46,7 @@
     }
 
     .button-container {
+      margin-top: auto;
       display: flex;
       align-items: center;
       justify-content: flex-end;

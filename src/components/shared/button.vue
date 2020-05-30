@@ -47,8 +47,8 @@ button {
 .light-color {
   background-color: $white;
   color: $dark-grey;
-  box-shadow: 0px 1px 7px -2px $dark-grey;
-  -webkit-box-shadow: 0px 1px 7px -2px $dark-grey;
-  -moz-box-shadow: 0px 1px 7px -2px $dark-grey;
+  box-shadow: 0px 1px 4px -1px $dark-grey;
+  -webkit-box-shadow: 0px 1px 4px -1px $dark-grey;
+  -moz-box-shadow: 0px 1px 4px -1px $dark-grey;
 }
 </style>

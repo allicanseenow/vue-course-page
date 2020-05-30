@@ -1,12 +1,24 @@
 <template>
   <div class="progress-bar-container">
-    <div class="progress-bar" />
+    <div class="progress-bar" :style="{ transform: calculateRate }" />
   </div>
 </template>
 
 <script>
 export default {
   name: 'ProgressBar',
+  props: {
+    percent: {
+      type: Number,
+      default: 0,
+    },
+  },
+  computed: {
+    calculateRate() {
+      console.log('this.percent is ', this.percent);
+      return `translateX(-${100 - this.percent}%)`;
+    },
+  },
 };
 </script>
 
@@ -19,7 +31,7 @@ export default {
   overflow: hidden;
   position: relative;
 
-  div {
+  .progress-bar {
     transform: translateX(-25%);
 
     background-color: $cyan;
