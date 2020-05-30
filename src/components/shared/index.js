@@ -1,3 +1,4 @@
 import Button from './button';
+import ProgressBar from './progress-bar';
 
-export { Button };
+export { Button, ProgressBar };

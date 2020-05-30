@@ -1,5 +1,5 @@
 <template>
-  <button>
+  <button :class="[className, { 'light-color': lightColor }]">
     <slot />
   </button>
 </template>
@@ -7,6 +7,10 @@
 <script>
 export default {
   name: 'Button',
+  props: {
+    lightColor: Boolean,
+    className: String,
+  },
 };
 </script>
 
@@ -38,5 +42,13 @@ button {
   padding: 0 16px;
   border-radius: 4px;
   overflow: visible;
+}
+
+.light-color {
+  background-color: $white;
+  color: $dark-grey;
+  box-shadow: 0px 1px 7px -2px $dark-grey;
+  -webkit-box-shadow: 0px 1px 7px -2px $dark-grey;
+  -moz-box-shadow: 0px 1px 7px -2px $dark-grey;
 }
 </style>

@@ -1,0 +1,47 @@
+@import "../../../styles/variables";
+
+.card-container {
+  max-width: 275px;
+  overflow: hidden;
+  box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);
+  border-radius: 4px;
+  color: rgba(0, 0, 0, 0.87);
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  background-color: #fff;
+
+  .card-image {
+    background-image: url("https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1091&q=80");
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 0;
+    padding-top: 56.25%;
+  }
+
+  .card-content {
+    padding: 16px;
+
+
+    h3 {
+      font-size: 14px;
+      margin-bottom: 0.75rem;
+    }
+
+    p {
+      color: rgba(0, 0, 0, 0.54);
+      font-size: 12px;
+      margin-bottom: 1.5rem;
+    }
+
+    .button-container {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      button:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+  }
+}

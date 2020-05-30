@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import { Button } from '../shared';
+import { Button } from '../../shared';
 export default {
   name: 'SearchBar',
   components: { Button },
