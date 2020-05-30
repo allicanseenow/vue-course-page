@@ -15,7 +15,6 @@ export default {
   },
   computed: {
     calculateRate() {
-      console.log('this.percent is ', this.percent);
       return `translateX(-${100 - this.percent}%)`;
     },
   },

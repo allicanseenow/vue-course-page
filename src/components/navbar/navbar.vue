@@ -1,5 +1,5 @@
 <template>
-  <div class="navbar-container">
+  <div id="app-header" class="navbar-container">
     <div class="navbar-inner-container">
       <h3 class="navbar-header">Your Courses</h3>
       <nav class="navbar">
@@ -25,6 +25,11 @@
 <script>
 export default {
   name: 'Navbar',
+  data() {
+    return {
+      isSticky: false,
+    };
+  },
 };
 </script>
 

@@ -1,7 +1,7 @@
 <template>
   <div class="searchbar-container">
     <div class="searchbar">
-      <icon class="search_icon"><i class="fas fa-search"></i></icon>
+      <div class="search_icon"><i class="fas fa-search"></i></div>
       <input
         class="search_input"
         type="text"
